@@ -1,10 +1,9 @@
 def classify_similarity(score):
+    percentage = score * 100
 
-    if score >= 0.75:
-        return "High Plagiarism"
-
-    elif score >= 0.45:
+    if percentage < 30:
+        return "Low Plagiarism"
+    elif percentage < 60:
         return "Moderate Plagiarism"
-
     else:
-        return "Low / No Plagiarism"
+        return "High Plagiarism"
